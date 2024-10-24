@@ -4,7 +4,6 @@
 
 package com.mycompany.ex02;
 
-import java.awt.BorderLayout;
 import java.io.DataInputStream;
 import java.io.IOException;
 
@@ -44,7 +43,6 @@ public class Ex02 {
                     System.out.println("Deseja continuar? (0 - stop)");
                     data = new DataInputStream(System.in); 
                     input = data.readLine();
-                    valor = Integer.parseInt(input);
                     break;
                 } catch (Exception erro){
                     System.out.println("Erro: " + erro.getMessage());
@@ -52,7 +50,7 @@ public class Ex02 {
             }
             
             
-            if (valor == 0){
+            if (input.equals("0")){
                 isContinue = false;
             }
             
